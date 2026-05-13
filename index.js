@@ -2,11 +2,15 @@
 
 const robot = require("robotjs");
 const lyrics = require("./lyrics");
+const banner = require("./banner");
+
+console.clear();
+console.log(banner);
 
 // ── Configuration ──────────────────────────────────────────────
 const INTERVAL = parseInt(process.env.INTERVAL) || 3000; // ms between steps
 const SPEED    = parseInt(process.env.SPEED)    || 10;  // robotjs speed
-let index = 0;
+let index = 1;
 
 robot.setMouseDelay(0);
 robot.setMouseDelay(2);
@@ -34,14 +38,19 @@ function* randomPattern() {
 
 // ── Main ───────────────────────────────────────────────────────
 const generator = randomPattern();
+console.log(`CTRL+C to stop`);
 console.log(`▶️  Now playing: Bring Me To Life - Evanescence`);
+console.log(lyrics[index]);
+index++;
 
 const { width, height } = robot.getScreenSize();
 
 const timer = setInterval(() => {
   const { x, y } = generator.next().value;
   robot.moveMouse(clamp(x, 0, width - 1), clamp(y, 0, height - 1));
-  console.log(lyrics[index]);
+  if (lyrics[index]) {
+    console.log(lyrics[index]);
+  }
   if (index === lyrics.length - 1) {
     index = 0;
   } else {
