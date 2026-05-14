@@ -21,3 +21,4 @@ Avoid you computer to sleep by WAKE IT UP with Bring me to life by Evanescence ð
 ```sh
 npx bringmetolife
 ```
+<img width="534" height="556" alt="Screenshot 2026-05-14 at 07 26 23" src="https://github.com/user-attachments/assets/9a95f86f-a3f3-44a4-8fd2-9c4a9be89850" />
