@@ -16,7 +16,7 @@
 
 
 
-Avoid you computer to sleep by WAKE IT UP with Bring me to life by Evanescence 🎵.
+Avoid your computer to sleep by WAKE IT UP with Bring me to life by Evanescence 🎵.
 
 ```sh
 npx bringmetolife
