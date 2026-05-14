@@ -1,6 +1,6 @@
 {
   "name": "bringmetolife",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "WAKE ME UP! WAKE ME UP INSIDE! Moves your mouse to keep the screen active",
   "main": "index.js",
   "bin": {
