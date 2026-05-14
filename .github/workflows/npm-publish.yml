@@ -15,9 +15,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: |
+      - name: Install Linux build dependencies for robotjs
+        run: |
           sudo apt-get update
-          sudo apt-get install -y libx11-dev libxtst-dev libpng++-dev
+          sudo apt-get install -y build-essential libx11-dev libxtst-dev libpng++-dev
       - run: npm ci
       - run: npm test
 
@@ -30,9 +31,10 @@ jobs:
         with:
           node-version: 20
           registry-url: https://registry.npmjs.org/
-      - run: |
+      - name: Install Linux build dependencies for robotjs
+        run: |
           sudo apt-get update
-          sudo apt-get install -y libx11-dev libxtst-dev libpng++-dev
+          sudo apt-get install -y build-essential libx11-dev libxtst-dev libpng++-dev
       - run: npm ci
       - run: npm publish
         env:
